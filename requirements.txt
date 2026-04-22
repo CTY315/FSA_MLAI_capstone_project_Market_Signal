@@ -1,0 +1,34 @@
+# Data & Finance
+pandas>=2.0
+numpy>=1.24
+yfinance>=0.2.30
+
+# ML & Evaluation
+scikit-learn>=1.3
+xgboost>=2.0
+statsmodels>=0.14
+scipy>=1.11
+
+# NLP & Embeddings
+sentence-transformers>=2.2
+transformers>=4.35
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+
+# Dashboard
+streamlit>=1.28
+
+# RAG (stretch goal)
+chromadb>=0.5
+langchain>=0.3
+langchain-chroma>=0.2
+langchain-community>=0.3
+langchain-anthropic>=0.3
+langchain-core>=0.3
+
+# Utilities
+joblib>=1.3
+tqdm>=4.65

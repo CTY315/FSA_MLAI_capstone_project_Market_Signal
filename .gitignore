@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Data (large files - don't commit raw data)
+data/raw/*.csv
+data/processed/*.csv
+data/chromadb/
+
+# Models (large files)
+models/*.pkl
+models/*.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+# anthropic API key 
+.streamlit/secrets.toml
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+CLAUDE.md
+.claude/
+models/*.pkl
+data/processed/*.csv
+data/chromadb/
+data/raw/*.csv
