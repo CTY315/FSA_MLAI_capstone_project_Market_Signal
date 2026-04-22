@@ -1,7 +1,7 @@
 # AI Market Signal: Multimodal Market Prediction Using Transformer News Embeddings
 
 ## Overview
-A machine learning system that combines market technical indicators and transformer-derived news embeddings (headlines) to predict next-day SPY (S&P 500 ETF) market direction. Includes a 5-tab Streamlit dashboard and a RAG-powered market assistant.
+A machine learning system that combines market technical indicators and transformer-derived news embeddings (headlines) to predict next-day SPY (S&P 500 ETF) market direction. Includes a 6-tab Streamlit dashboard and a RAG-powered market assistant.
 
 **Author:** Shirley Cheung  
 **Program:** FullStack Academy AI/ML — Cohort 2510-FTB-CT-AIM-PT  
