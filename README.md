@@ -108,12 +108,12 @@ python scripts/index_headlines.py
 - **McNemar's test**: p = 0.035 — enhanced model makes significantly different errors than baseline
 
 ### Dashboard Tabs
-1. **Performance Overview** — test metrics, walk-forward AUC chart, feature importance
-2. **Headlines Browser** — browse raw headlines by date, news shock flags
-3. **Daily Predictions** — SPY close price chart with model predictions and shock overlays
-4. **Model Comparison** — all 4 models, confusion matrices, ROC curves, bootstrap CIs, McNemar's test
-5. **Market Assistant** — RAG-powered Q&A over 2008–2023 financial headlines (requires API key)
-
+1. **Market Assistant** — RAG-powered Q&A over 2008–2023 financial headlines (requires API key)
+2. **My Prediction** - User can predict the direction based on the previous date data
+3. **Headlines Browser** — browse raw headlines by date, news shock flags
+4. **Daily Predictions** — SPY close price chart with model predictions and shock overlays
+5. **Model Comparison** — all 4 models, confusion matrices, ROC curves, bootstrap CIs, McNemar's test
+6. **Performance Overview** — test metrics, walk-forward AUC chart, feature importance
 ---
 
 ## Data Sources
