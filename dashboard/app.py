@@ -191,18 +191,18 @@ with st.sidebar:
     st.divider()
     with st.expander("ℹ️ How to use"):
         st.markdown(
-            "**📰 Headlines Browser**\n"
-            "Browse S&P 500 financial headlines by trading date. Use the shock-date shortcut "
-            "or pick any date with the date picker.\n\n"
-            "**🎯 My Prediction**\n"
-            "Pick a test-set day, review the previous day's news signals and technical "
-            "indicators, make your Up/Down call, then reveal the answer.\n\n"
-            "**🔮 Daily Model Predictions**\n"
-            "View the enhanced model's predicted vs actual SPY direction over the test window. "
-            "Filter by date range and inspect the prediction table.\n\n"
             "**🤖 Market Assistant**\n"
             "Ask natural-language questions about historical market headlines (2008–2023). "
             "Requires an Anthropic API key in `.streamlit/secrets.toml`.\n\n"
+            "**🎯 My Prediction**\n"
+            "Pick a test-set day, review the previous day's news signals and technical "
+            "indicators, make your Up/Down call, then reveal the answer.\n\n"
+            "**📰 Headlines Browser**\n"
+            "Browse S&P 500 financial headlines by trading date. Use the shock-date shortcut "
+            "or pick any date with the date picker.\n\n"
+            "**🔮 Daily Model Predictions**\n"
+            "View the enhanced model's predicted vs actual SPY direction over the test window. "
+            "Filter by date range and inspect the prediction table.\n\n"
             "**⚖️ Model Comparison**\n"
             "Compare all 4 models (XGB baseline/enhanced + LR tech/news) side-by-side with "
             "ROC curves, confusion matrices, bootstrap CIs, and McNemar's test.\n\n"
@@ -731,7 +731,7 @@ with tab1:
         "Claude to generate a grounded answer."
     )
 
-    _api_key: str | None = None
+    _api_key = None  # type: ignore[assignment]
     _rag_ready = False
 
     try:
