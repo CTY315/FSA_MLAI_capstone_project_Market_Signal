@@ -50,7 +50,7 @@ FSA_AI_capstone_project/
 ```bash
 # Clone the repo
 git clone https://github.com/CTY315/FSA_AI_capstone_project.git
-cd FSA_AI_capstone_project
+cd FSA_MLAI_capstone_project_Market_Signal
 
 # Create virtual environment
 python -m venv venv
@@ -79,7 +79,7 @@ streamlit run dashboard/app.py
 ```
 
 ### RAG Market Assistant (Optional)
-The 5th dashboard tab requires:
+The 2nd dashboard tab requires:
 1. An Anthropic API key in `.streamlit/secrets.toml` (copy from `.streamlit/secrets.toml.example`)
 2. One-time headline indexing:
 ```bash
