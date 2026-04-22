@@ -1,7 +1,7 @@
 # AI Market Signal: Multimodal Market Prediction Using Transformer News Embeddings
 
 ## Overview
-A machine learning system that combines market technical indicators and transformer-derived news embeddings (headlines) to predict next-day SPY (S&P 500 ETF) market direction. Includes a 5-tab Streamlit dashboard and a RAG-powered market assistant.
+A machine learning system that combines market technical indicators and transformer-derived news embeddings (headlines) to predict next-day SPY (S&P 500 ETF) market direction. Includes a 6-tab Streamlit dashboard and a RAG-powered market assistant.
 
 **Author:** Shirley Cheung  
 **Program:** FullStack Academy AI/ML — Cohort 2510-FTB-CT-AIM-PT  
@@ -50,7 +50,7 @@ FSA_AI_capstone_project/
 ```bash
 # Clone the repo
 git clone https://github.com/CTY315/FSA_AI_capstone_project.git
-cd FSA_AI_capstone_project
+cd FSA_MLAI_capstone_project_Market_Signal
 
 # Create virtual environment
 python -m venv venv
@@ -79,7 +79,7 @@ streamlit run dashboard/app.py
 ```
 
 ### RAG Market Assistant (Optional)
-The 5th dashboard tab requires:
+The 2nd dashboard tab requires:
 1. An Anthropic API key in `.streamlit/secrets.toml` (copy from `.streamlit/secrets.toml.example`)
 2. One-time headline indexing:
 ```bash
@@ -108,12 +108,12 @@ python scripts/index_headlines.py
 - **McNemar's test**: p = 0.035 — enhanced model makes significantly different errors than baseline
 
 ### Dashboard Tabs
-1. **Performance Overview** — test metrics, walk-forward AUC chart, feature importance
-2. **Headlines Browser** — browse raw headlines by date, news shock flags
-3. **Daily Predictions** — SPY close price chart with model predictions and shock overlays
-4. **Model Comparison** — all 4 models, confusion matrices, ROC curves, bootstrap CIs, McNemar's test
-5. **Market Assistant** — RAG-powered Q&A over 2008–2023 financial headlines (requires API key)
-
+1. **Market Assistant** — RAG-powered Q&A over 2008–2023 financial headlines (requires API key)
+2. **My Prediction** - User can predict the direction based on the previous date data
+3. **Headlines Browser** — browse raw headlines by date, news shock flags
+4. **Daily Predictions** — SPY close price chart with model predictions and shock overlays
+5. **Model Comparison** — all 4 models, confusion matrices, ROC curves, bootstrap CIs, McNemar's test
+6. **Performance Overview** — test metrics, walk-forward AUC chart, feature importance
 ---
 
 ## Data Sources
