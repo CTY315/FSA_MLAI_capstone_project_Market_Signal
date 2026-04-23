@@ -761,7 +761,7 @@ with tab1:
             if is_indexed():
                 st.rerun()
             else:
-                st.error(result.stderr or "ChromaDB indexing failed with no stderr output.")
+                st.error("ChromaDB indexing failed. Check logs for details.")
         else:
             _rag_ready = True
 
