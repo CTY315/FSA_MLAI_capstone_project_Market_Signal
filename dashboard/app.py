@@ -218,6 +218,9 @@ with st.sidebar:
         "| Val | 2021-01-01 → 2022-06-30 |\n"
         "| Test | 2022-07-01 → 2023-12-29 |"
     )
+# --------- todo: debugging: uncomment to clear caches during development ---------
+st.write("ROOT:", str(ROOT))
+st.write("Files exist:", list(DATA_PROCESSED.glob("*")))
 
 # ── Load data ──────────────────────────────────────────────────────────────────
 df = load_features()
