@@ -32,3 +32,6 @@ langchain-core>=0.3
 # Utilities
 joblib>=1.3
 tqdm>=4.65
+
+# for deployment
+protobuf>=3.20,<5
