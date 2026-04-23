@@ -752,14 +752,16 @@ with tab1:
 
         if not is_indexed():
             with st.spinner("Building headline index for first launch..."):
-                subprocess.run(
+                result = subprocess.run(
                     ["python3", "scripts/index_headlines.py"],
                     cwd=Path(__file__).resolve().parent.parent,
+                    capture_output=True,
+                    text=True,
                 )
             if is_indexed():
                 st.rerun()
             else:
-                st.error("ChromaDB indexing failed. Check logs for details.")
+                st.error(result.stderr or "ChromaDB indexing failed with no stderr output.")
         else:
             _rag_ready = True
 
