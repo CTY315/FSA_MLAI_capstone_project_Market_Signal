@@ -753,7 +753,7 @@ with tab1:
         if not is_indexed():
             with st.spinner("Building headline index for first launch..."):
                 result = subprocess.run(
-                    ["python3", "scripts/index_headlines.py"],
+                    [sys.executable, "scripts/index_headlines.py"],
                     cwd=Path(__file__).resolve().parent.parent,
                     capture_output=True,
                     text=True,
