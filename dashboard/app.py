@@ -1,6 +1,7 @@
 """AI Market Signal Dashboard — Streamlit app."""
 
 import pickle
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -750,12 +751,15 @@ with tab1:
         from src.rag import is_indexed
 
         if not is_indexed():
-            st.error(
-                "**ChromaDB not indexed yet.** "
-                "Run the one-time indexing script from the project root:\n\n"
-                "```bash\npython scripts/index_headlines.py\n```\n\n"
-                "This takes a few minutes and only needs to be done once."
-            )
+            with st.spinner("Building headline index for first launch..."):
+                subprocess.run(
+                    ["python3", "scripts/index_headlines.py"],
+                    cwd=Path(__file__).resolve().parent.parent,
+                )
+            if is_indexed():
+                st.rerun()
+            else:
+                st.error("ChromaDB indexing failed. Check logs for details.")
         else:
             _rag_ready = True
 
